@@ -40,7 +40,7 @@ def tweet_a_woman(tweepy_client):
     parsed = r1.json()
 
     # grabbing a random work from the top 6000
-    number = randint(1, 700)
+    number = randint(1, 70)
 
     # grabbing data about the individual work
     obj_id = parsed['objectIDs'][number]
@@ -66,6 +66,8 @@ def tweet_a_woman(tweepy_client):
     image_url = parsed['primaryImage']
     # img = requests.get(image_url)
     print(f'reading image: {image_url}')
+    image_url = 'https://' + image_url
+    print(image_url)
     img = requests.get(image_url, timeout=10)
     img_content = img.content
     with open(f'{obj_id}.jpg', 'wb') as handler:
