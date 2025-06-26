@@ -36,7 +36,7 @@ def tweet_a_woman(tweepy_client):
     # debugging: checking to see that the function is running
     print('fetching women from the MET...')
 
-    r1 = requests.get("https://collectionapi.metmuseum.org/public/collection/v1/search?q=maps")
+    r1 = requests.get("https://collectionapi.metmuseum.org/public/collection/v1/search?q=woman")
     parsed = r1.json()
 
     # grabbing a random work from the top 6000
