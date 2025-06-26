@@ -40,7 +40,7 @@ def tweet_a_woman(tweepy_client):
     parsed = r1.json()
 
     # grabbing a random work from the top 6000
-    number = randint(1, 10)
+    number = randint(1, 1000)
 
     # grabbing data about the individual work
     obj_id = parsed['objectIDs'][number]
